@@ -1,6 +1,6 @@
-type ExampleEntity @entity {
+type RoundData @entity {
   id: ID!
-  count: BigInt!
-  current: BigInt! # int256
-  roundId: BigInt! # uint256
+  answer: BigInt!
+  timestamp: BigInt! 
+  roundId: BigInt! 
 }
