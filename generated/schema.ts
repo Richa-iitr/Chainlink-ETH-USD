@@ -68,4 +68,13 @@ export class RoundData extends Entity {
   set roundId(value: BigInt) {
     this.set("roundId", Value.fromBigInt(value));
   }
+
+  get blockNumber(): BigInt {
+    let value = this.get("blockNumber");
+    return value!.toBigInt();
+  }
+
+  set blockNumber(value: BigInt) {
+    this.set("blockNumber", Value.fromBigInt(value));
+  }
 }

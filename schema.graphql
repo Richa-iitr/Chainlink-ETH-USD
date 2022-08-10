@@ -3,4 +3,5 @@ type RoundData @entity {
   answer: BigInt!
   timestamp: BigInt! 
   roundId: BigInt! 
+  blockNumber: BigInt!
 }
