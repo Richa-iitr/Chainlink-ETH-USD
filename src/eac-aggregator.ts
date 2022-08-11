@@ -1,4 +1,4 @@
-import { BigInt, log } from "@graphprotocol/graph-ts";
+import { BigInt, dataSource, log } from "@graphprotocol/graph-ts";
 import {
   EACAggregator,
   AnswerUpdated,
@@ -6,6 +6,8 @@ import {
 import { RoundData } from "../generated/schema";
 
 export function handleAnswerUpdated(event: AnswerUpdated): void {
+  let context = dataSource.context();
+  let _aggregator = context.getString("aggregator");
   let id =
     event.transaction.hash.toHexString() + "#" + event.logIndex.toString();
   let data = RoundData.load(id);
@@ -15,12 +17,14 @@ export function handleAnswerUpdated(event: AnswerUpdated): void {
     data.timestamp = BigInt.fromI32(0);
     data.roundId = BigInt.fromI32(0);
     data.blockNumber = BigInt.fromI32(0);
+    data.aggregator = "";
   }
 
   data.answer = event.params.current;
   data.timestamp = event.params.updatedAt;
   data.roundId = event.params.roundId;
   data.blockNumber = event.block.number;
+  data.aggregator = _aggregator;
 
   log.info("block timestamp: {}, event timetsamp: {}", [
     event.block.timestamp.toString(),

@@ -77,4 +77,13 @@ export class RoundData extends Entity {
   set blockNumber(value: BigInt) {
     this.set("blockNumber", Value.fromBigInt(value));
   }
+
+  get aggregator(): string {
+    let value = this.get("aggregator");
+    return value!.toString();
+  }
+
+  set aggregator(value: string) {
+    this.set("aggregator", Value.fromString(value));
+  }
 }
