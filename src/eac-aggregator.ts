@@ -12,14 +12,14 @@ export function handleAnswerUpdated(event: AnswerUpdated): void {
   let data = RoundData.load(id);
   if (data == null) {
     data = new RoundData(id);
-    data.answer = 0;
+    data.answer = BigInt.fromI32(0);
     data.timestamp = 0;
     data.roundId = new BigInt(0);
     data.blockNumber = 0;
   }
 
   let context = dataSource.context();
-  data.answer = (event.params.current).toI32();
+  data.answer = (event.params.current);
   data.timestamp = (event.params.updatedAt).toI32();
   data.roundId = event.params.roundId;
   data.blockNumber = (event.block.number).toI32();

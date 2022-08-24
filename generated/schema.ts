@@ -51,13 +51,13 @@ export class RoundData extends Entity {
     this.set("aggregator", Value.fromString(value));
   }
 
-  get answer(): i32 {
+  get answer(): BigInt {
     let value = this.get("answer");
-    return value!.toI32();
+    return value!.toBigInt();
   }
 
-  set answer(value: i32) {
-    this.set("answer", Value.fromI32(value));
+  set answer(value: BigInt) {
+    this.set("answer", Value.fromBigInt(value));
   }
 
   get timestamp(): i32 {
