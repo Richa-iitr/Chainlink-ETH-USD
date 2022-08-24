@@ -462,6 +462,414 @@ export class ValidatorUpdated__Params {
   }
 }
 
+export class AddedAccess1 extends ethereum.Event {
+  get params(): AddedAccess1__Params {
+    return new AddedAccess1__Params(this);
+  }
+}
+
+export class AddedAccess1__Params {
+  _event: AddedAccess1;
+
+  constructor(event: AddedAccess1) {
+    this._event = event;
+  }
+
+  get user(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+}
+
+export class AnswerUpdated2 extends ethereum.Event {
+  get params(): AnswerUpdated2__Params {
+    return new AnswerUpdated2__Params(this);
+  }
+}
+
+export class AnswerUpdated2__Params {
+  _event: AnswerUpdated2;
+
+  constructor(event: AnswerUpdated2) {
+    this._event = event;
+  }
+
+  get current(): BigInt {
+    return this._event.parameters[0].value.toBigInt();
+  }
+
+  get roundId(): BigInt {
+    return this._event.parameters[1].value.toBigInt();
+  }
+
+  get updatedAt(): BigInt {
+    return this._event.parameters[2].value.toBigInt();
+  }
+}
+
+export class AvailableFundsUpdated1 extends ethereum.Event {
+  get params(): AvailableFundsUpdated1__Params {
+    return new AvailableFundsUpdated1__Params(this);
+  }
+}
+
+export class AvailableFundsUpdated1__Params {
+  _event: AvailableFundsUpdated1;
+
+  constructor(event: AvailableFundsUpdated1) {
+    this._event = event;
+  }
+
+  get amount(): BigInt {
+    return this._event.parameters[0].value.toBigInt();
+  }
+}
+
+export class CheckAccessDisabled1 extends ethereum.Event {
+  get params(): CheckAccessDisabled1__Params {
+    return new CheckAccessDisabled1__Params(this);
+  }
+}
+
+export class CheckAccessDisabled1__Params {
+  _event: CheckAccessDisabled1;
+
+  constructor(event: CheckAccessDisabled1) {
+    this._event = event;
+  }
+}
+
+export class CheckAccessEnabled1 extends ethereum.Event {
+  get params(): CheckAccessEnabled1__Params {
+    return new CheckAccessEnabled1__Params(this);
+  }
+}
+
+export class CheckAccessEnabled1__Params {
+  _event: CheckAccessEnabled1;
+
+  constructor(event: CheckAccessEnabled1) {
+    this._event = event;
+  }
+}
+
+export class NewRound2 extends ethereum.Event {
+  get params(): NewRound2__Params {
+    return new NewRound2__Params(this);
+  }
+}
+
+export class NewRound2__Params {
+  _event: NewRound2;
+
+  constructor(event: NewRound2) {
+    this._event = event;
+  }
+
+  get roundId(): BigInt {
+    return this._event.parameters[0].value.toBigInt();
+  }
+
+  get startedBy(): Address {
+    return this._event.parameters[1].value.toAddress();
+  }
+
+  get startedAt(): BigInt {
+    return this._event.parameters[2].value.toBigInt();
+  }
+}
+
+export class OracleAdminUpdateRequested1 extends ethereum.Event {
+  get params(): OracleAdminUpdateRequested1__Params {
+    return new OracleAdminUpdateRequested1__Params(this);
+  }
+}
+
+export class OracleAdminUpdateRequested1__Params {
+  _event: OracleAdminUpdateRequested1;
+
+  constructor(event: OracleAdminUpdateRequested1) {
+    this._event = event;
+  }
+
+  get oracle(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+
+  get admin(): Address {
+    return this._event.parameters[1].value.toAddress();
+  }
+
+  get newAdmin(): Address {
+    return this._event.parameters[2].value.toAddress();
+  }
+}
+
+export class OracleAdminUpdated1 extends ethereum.Event {
+  get params(): OracleAdminUpdated1__Params {
+    return new OracleAdminUpdated1__Params(this);
+  }
+}
+
+export class OracleAdminUpdated1__Params {
+  _event: OracleAdminUpdated1;
+
+  constructor(event: OracleAdminUpdated1) {
+    this._event = event;
+  }
+
+  get oracle(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+
+  get newAdmin(): Address {
+    return this._event.parameters[1].value.toAddress();
+  }
+}
+
+export class OraclePermissionsUpdated1 extends ethereum.Event {
+  get params(): OraclePermissionsUpdated1__Params {
+    return new OraclePermissionsUpdated1__Params(this);
+  }
+}
+
+export class OraclePermissionsUpdated1__Params {
+  _event: OraclePermissionsUpdated1;
+
+  constructor(event: OraclePermissionsUpdated1) {
+    this._event = event;
+  }
+
+  get oracle(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+
+  get whitelisted(): boolean {
+    return this._event.parameters[1].value.toBoolean();
+  }
+}
+
+export class OwnershipTransferRequested2 extends ethereum.Event {
+  get params(): OwnershipTransferRequested2__Params {
+    return new OwnershipTransferRequested2__Params(this);
+  }
+}
+
+export class OwnershipTransferRequested2__Params {
+  _event: OwnershipTransferRequested2;
+
+  constructor(event: OwnershipTransferRequested2) {
+    this._event = event;
+  }
+
+  get from(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+
+  get to(): Address {
+    return this._event.parameters[1].value.toAddress();
+  }
+}
+
+export class OwnershipTransferred2 extends ethereum.Event {
+  get params(): OwnershipTransferred2__Params {
+    return new OwnershipTransferred2__Params(this);
+  }
+}
+
+export class OwnershipTransferred2__Params {
+  _event: OwnershipTransferred2;
+
+  constructor(event: OwnershipTransferred2) {
+    this._event = event;
+  }
+
+  get from(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+
+  get to(): Address {
+    return this._event.parameters[1].value.toAddress();
+  }
+}
+
+export class RemovedAccess1 extends ethereum.Event {
+  get params(): RemovedAccess1__Params {
+    return new RemovedAccess1__Params(this);
+  }
+}
+
+export class RemovedAccess1__Params {
+  _event: RemovedAccess1;
+
+  constructor(event: RemovedAccess1) {
+    this._event = event;
+  }
+
+  get user(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+}
+
+export class RequesterPermissionsSet1 extends ethereum.Event {
+  get params(): RequesterPermissionsSet1__Params {
+    return new RequesterPermissionsSet1__Params(this);
+  }
+}
+
+export class RequesterPermissionsSet1__Params {
+  _event: RequesterPermissionsSet1;
+
+  constructor(event: RequesterPermissionsSet1) {
+    this._event = event;
+  }
+
+  get requester(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+
+  get authorized(): boolean {
+    return this._event.parameters[1].value.toBoolean();
+  }
+
+  get delay(): BigInt {
+    return this._event.parameters[2].value.toBigInt();
+  }
+}
+
+export class RoundDetailsUpdated1 extends ethereum.Event {
+  get params(): RoundDetailsUpdated1__Params {
+    return new RoundDetailsUpdated1__Params(this);
+  }
+}
+
+export class RoundDetailsUpdated1__Params {
+  _event: RoundDetailsUpdated1;
+
+  constructor(event: RoundDetailsUpdated1) {
+    this._event = event;
+  }
+
+  get paymentAmount(): BigInt {
+    return this._event.parameters[0].value.toBigInt();
+  }
+
+  get minSubmissionCount(): BigInt {
+    return this._event.parameters[1].value.toBigInt();
+  }
+
+  get maxSubmissionCount(): BigInt {
+    return this._event.parameters[2].value.toBigInt();
+  }
+
+  get restartDelay(): BigInt {
+    return this._event.parameters[3].value.toBigInt();
+  }
+
+  get timeout(): BigInt {
+    return this._event.parameters[4].value.toBigInt();
+  }
+}
+
+export class SubmissionReceived1 extends ethereum.Event {
+  get params(): SubmissionReceived1__Params {
+    return new SubmissionReceived1__Params(this);
+  }
+}
+
+export class SubmissionReceived1__Params {
+  _event: SubmissionReceived1;
+
+  constructor(event: SubmissionReceived1) {
+    this._event = event;
+  }
+
+  get submission(): BigInt {
+    return this._event.parameters[0].value.toBigInt();
+  }
+
+  get round(): BigInt {
+    return this._event.parameters[1].value.toBigInt();
+  }
+
+  get oracle(): Address {
+    return this._event.parameters[2].value.toAddress();
+  }
+}
+
+export class ValidatorUpdated1 extends ethereum.Event {
+  get params(): ValidatorUpdated1__Params {
+    return new ValidatorUpdated1__Params(this);
+  }
+}
+
+export class ValidatorUpdated1__Params {
+  _event: ValidatorUpdated1;
+
+  constructor(event: ValidatorUpdated1) {
+    this._event = event;
+  }
+
+  get previous(): Address {
+    return this._event.parameters[0].value.toAddress();
+  }
+
+  get current(): Address {
+    return this._event.parameters[1].value.toAddress();
+  }
+}
+
+export class AnswerUpdated3 extends ethereum.Event {
+  get params(): AnswerUpdated3__Params {
+    return new AnswerUpdated3__Params(this);
+  }
+}
+
+export class AnswerUpdated3__Params {
+  _event: AnswerUpdated3;
+
+  constructor(event: AnswerUpdated3) {
+    this._event = event;
+  }
+
+  get current(): BigInt {
+    return this._event.parameters[0].value.toBigInt();
+  }
+
+  get roundId(): BigInt {
+    return this._event.parameters[1].value.toBigInt();
+  }
+
+  get updatedAt(): BigInt {
+    return this._event.parameters[2].value.toBigInt();
+  }
+}
+
+export class NewRound3 extends ethereum.Event {
+  get params(): NewRound3__Params {
+    return new NewRound3__Params(this);
+  }
+}
+
+export class NewRound3__Params {
+  _event: NewRound3;
+
+  constructor(event: NewRound3) {
+    this._event = event;
+  }
+
+  get roundId(): BigInt {
+    return this._event.parameters[0].value.toBigInt();
+  }
+
+  get startedBy(): Address {
+    return this._event.parameters[1].value.toAddress();
+  }
+
+  get startedAt(): BigInt {
+    return this._event.parameters[2].value.toBigInt();
+  }
+}
+
 export class EACAggregator__getRoundDataResult {
   value0: BigInt;
   value1: BigInt;
@@ -850,6 +1258,293 @@ export class EACAggregator__oracleRoundStateResult {
 
   get_paymentAmount(): BigInt {
     return this.value7;
+  }
+}
+
+export class EACAggregator__getRoundData2Result {
+  value0: BigInt;
+  value1: BigInt;
+  value2: BigInt;
+  value3: BigInt;
+  value4: BigInt;
+
+  constructor(
+    value0: BigInt,
+    value1: BigInt,
+    value2: BigInt,
+    value3: BigInt,
+    value4: BigInt
+  ) {
+    this.value0 = value0;
+    this.value1 = value1;
+    this.value2 = value2;
+    this.value3 = value3;
+    this.value4 = value4;
+  }
+
+  toMap(): TypedMap<string, ethereum.Value> {
+    let map = new TypedMap<string, ethereum.Value>();
+    map.set("value0", ethereum.Value.fromUnsignedBigInt(this.value0));
+    map.set("value1", ethereum.Value.fromSignedBigInt(this.value1));
+    map.set("value2", ethereum.Value.fromUnsignedBigInt(this.value2));
+    map.set("value3", ethereum.Value.fromUnsignedBigInt(this.value3));
+    map.set("value4", ethereum.Value.fromUnsignedBigInt(this.value4));
+    return map;
+  }
+
+  getRoundId(): BigInt {
+    return this.value0;
+  }
+
+  getAnswer(): BigInt {
+    return this.value1;
+  }
+
+  getStartedAt(): BigInt {
+    return this.value2;
+  }
+
+  getUpdatedAt(): BigInt {
+    return this.value3;
+  }
+
+  getAnsweredInRound(): BigInt {
+    return this.value4;
+  }
+}
+
+export class EACAggregator__latestRoundData2Result {
+  value0: BigInt;
+  value1: BigInt;
+  value2: BigInt;
+  value3: BigInt;
+  value4: BigInt;
+
+  constructor(
+    value0: BigInt,
+    value1: BigInt,
+    value2: BigInt,
+    value3: BigInt,
+    value4: BigInt
+  ) {
+    this.value0 = value0;
+    this.value1 = value1;
+    this.value2 = value2;
+    this.value3 = value3;
+    this.value4 = value4;
+  }
+
+  toMap(): TypedMap<string, ethereum.Value> {
+    let map = new TypedMap<string, ethereum.Value>();
+    map.set("value0", ethereum.Value.fromUnsignedBigInt(this.value0));
+    map.set("value1", ethereum.Value.fromSignedBigInt(this.value1));
+    map.set("value2", ethereum.Value.fromUnsignedBigInt(this.value2));
+    map.set("value3", ethereum.Value.fromUnsignedBigInt(this.value3));
+    map.set("value4", ethereum.Value.fromUnsignedBigInt(this.value4));
+    return map;
+  }
+
+  getRoundId(): BigInt {
+    return this.value0;
+  }
+
+  getAnswer(): BigInt {
+    return this.value1;
+  }
+
+  getStartedAt(): BigInt {
+    return this.value2;
+  }
+
+  getUpdatedAt(): BigInt {
+    return this.value3;
+  }
+
+  getAnsweredInRound(): BigInt {
+    return this.value4;
+  }
+}
+
+export class EACAggregator__oracleRoundState1Result {
+  value0: boolean;
+  value1: BigInt;
+  value2: BigInt;
+  value3: BigInt;
+  value4: BigInt;
+  value5: BigInt;
+  value6: i32;
+  value7: BigInt;
+
+  constructor(
+    value0: boolean,
+    value1: BigInt,
+    value2: BigInt,
+    value3: BigInt,
+    value4: BigInt,
+    value5: BigInt,
+    value6: i32,
+    value7: BigInt
+  ) {
+    this.value0 = value0;
+    this.value1 = value1;
+    this.value2 = value2;
+    this.value3 = value3;
+    this.value4 = value4;
+    this.value5 = value5;
+    this.value6 = value6;
+    this.value7 = value7;
+  }
+
+  toMap(): TypedMap<string, ethereum.Value> {
+    let map = new TypedMap<string, ethereum.Value>();
+    map.set("value0", ethereum.Value.fromBoolean(this.value0));
+    map.set("value1", ethereum.Value.fromUnsignedBigInt(this.value1));
+    map.set("value2", ethereum.Value.fromSignedBigInt(this.value2));
+    map.set("value3", ethereum.Value.fromUnsignedBigInt(this.value3));
+    map.set("value4", ethereum.Value.fromUnsignedBigInt(this.value4));
+    map.set("value5", ethereum.Value.fromUnsignedBigInt(this.value5));
+    map.set(
+      "value6",
+      ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(this.value6))
+    );
+    map.set("value7", ethereum.Value.fromUnsignedBigInt(this.value7));
+    return map;
+  }
+
+  get_eligibleToSubmit(): boolean {
+    return this.value0;
+  }
+
+  get_roundId(): BigInt {
+    return this.value1;
+  }
+
+  get_latestSubmission(): BigInt {
+    return this.value2;
+  }
+
+  get_startedAt(): BigInt {
+    return this.value3;
+  }
+
+  get_timeout(): BigInt {
+    return this.value4;
+  }
+
+  get_availableFunds(): BigInt {
+    return this.value5;
+  }
+
+  get_oracleCount(): i32 {
+    return this.value6;
+  }
+
+  get_paymentAmount(): BigInt {
+    return this.value7;
+  }
+}
+
+export class EACAggregator__getRoundData3Result {
+  value0: BigInt;
+  value1: BigInt;
+  value2: BigInt;
+  value3: BigInt;
+  value4: BigInt;
+
+  constructor(
+    value0: BigInt,
+    value1: BigInt,
+    value2: BigInt,
+    value3: BigInt,
+    value4: BigInt
+  ) {
+    this.value0 = value0;
+    this.value1 = value1;
+    this.value2 = value2;
+    this.value3 = value3;
+    this.value4 = value4;
+  }
+
+  toMap(): TypedMap<string, ethereum.Value> {
+    let map = new TypedMap<string, ethereum.Value>();
+    map.set("value0", ethereum.Value.fromUnsignedBigInt(this.value0));
+    map.set("value1", ethereum.Value.fromSignedBigInt(this.value1));
+    map.set("value2", ethereum.Value.fromUnsignedBigInt(this.value2));
+    map.set("value3", ethereum.Value.fromUnsignedBigInt(this.value3));
+    map.set("value4", ethereum.Value.fromUnsignedBigInt(this.value4));
+    return map;
+  }
+
+  getRoundId(): BigInt {
+    return this.value0;
+  }
+
+  getAnswer(): BigInt {
+    return this.value1;
+  }
+
+  getStartedAt(): BigInt {
+    return this.value2;
+  }
+
+  getUpdatedAt(): BigInt {
+    return this.value3;
+  }
+
+  getAnsweredInRound(): BigInt {
+    return this.value4;
+  }
+}
+
+export class EACAggregator__latestRoundData3Result {
+  value0: BigInt;
+  value1: BigInt;
+  value2: BigInt;
+  value3: BigInt;
+  value4: BigInt;
+
+  constructor(
+    value0: BigInt,
+    value1: BigInt,
+    value2: BigInt,
+    value3: BigInt,
+    value4: BigInt
+  ) {
+    this.value0 = value0;
+    this.value1 = value1;
+    this.value2 = value2;
+    this.value3 = value3;
+    this.value4 = value4;
+  }
+
+  toMap(): TypedMap<string, ethereum.Value> {
+    let map = new TypedMap<string, ethereum.Value>();
+    map.set("value0", ethereum.Value.fromUnsignedBigInt(this.value0));
+    map.set("value1", ethereum.Value.fromSignedBigInt(this.value1));
+    map.set("value2", ethereum.Value.fromUnsignedBigInt(this.value2));
+    map.set("value3", ethereum.Value.fromUnsignedBigInt(this.value3));
+    map.set("value4", ethereum.Value.fromUnsignedBigInt(this.value4));
+    return map;
+  }
+
+  getRoundId(): BigInt {
+    return this.value0;
+  }
+
+  getAnswer(): BigInt {
+    return this.value1;
+  }
+
+  getStartedAt(): BigInt {
+    return this.value2;
+  }
+
+  getUpdatedAt(): BigInt {
+    return this.value3;
+  }
+
+  getAnsweredInRound(): BigInt {
+    return this.value4;
   }
 }
 
@@ -1896,6 +2591,866 @@ export class EACAggregator extends ethereum.SmartContract {
     let value = result.value;
     return ethereum.CallResult.fromValue(value[0].toBigInt());
   }
+
+  allocatedFunds1(): BigInt {
+    let result = super.call("allocatedFunds", "allocatedFunds():(uint128)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_allocatedFunds1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "allocatedFunds",
+      "allocatedFunds():(uint128)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  availableFunds1(): BigInt {
+    let result = super.call("availableFunds", "availableFunds():(uint128)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_availableFunds1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "availableFunds",
+      "availableFunds():(uint128)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  checkEnabled1(): boolean {
+    let result = super.call("checkEnabled", "checkEnabled():(bool)", []);
+
+    return result[0].toBoolean();
+  }
+
+  try_checkEnabled1(): ethereum.CallResult<boolean> {
+    let result = super.tryCall("checkEnabled", "checkEnabled():(bool)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBoolean());
+  }
+
+  decimals2(): i32 {
+    let result = super.call("decimals", "decimals():(uint8)", []);
+
+    return result[0].toI32();
+  }
+
+  try_decimals2(): ethereum.CallResult<i32> {
+    let result = super.tryCall("decimals", "decimals():(uint8)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toI32());
+  }
+
+  description2(): string {
+    let result = super.call("description", "description():(string)", []);
+
+    return result[0].toString();
+  }
+
+  try_description2(): ethereum.CallResult<string> {
+    let result = super.tryCall("description", "description():(string)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toString());
+  }
+
+  getAdmin1(_oracle: Address): Address {
+    let result = super.call("getAdmin", "getAdmin(address):(address)", [
+      ethereum.Value.fromAddress(_oracle)
+    ]);
+
+    return result[0].toAddress();
+  }
+
+  try_getAdmin1(_oracle: Address): ethereum.CallResult<Address> {
+    let result = super.tryCall("getAdmin", "getAdmin(address):(address)", [
+      ethereum.Value.fromAddress(_oracle)
+    ]);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toAddress());
+  }
+
+  getAnswer2(_roundId: BigInt): BigInt {
+    let result = super.call("getAnswer", "getAnswer(uint256):(int256)", [
+      ethereum.Value.fromUnsignedBigInt(_roundId)
+    ]);
+
+    return result[0].toBigInt();
+  }
+
+  try_getAnswer2(_roundId: BigInt): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("getAnswer", "getAnswer(uint256):(int256)", [
+      ethereum.Value.fromUnsignedBigInt(_roundId)
+    ]);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  getOracles1(): Array<Address> {
+    let result = super.call("getOracles", "getOracles():(address[])", []);
+
+    return result[0].toAddressArray();
+  }
+
+  try_getOracles1(): ethereum.CallResult<Array<Address>> {
+    let result = super.tryCall("getOracles", "getOracles():(address[])", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toAddressArray());
+  }
+
+  getRoundData2(_roundId: BigInt): EACAggregator__getRoundData2Result {
+    let result = super.call(
+      "getRoundData",
+      "getRoundData(uint80):(uint80,int256,uint256,uint256,uint80)",
+      [ethereum.Value.fromUnsignedBigInt(_roundId)]
+    );
+
+    return new EACAggregator__getRoundData2Result(
+      result[0].toBigInt(),
+      result[1].toBigInt(),
+      result[2].toBigInt(),
+      result[3].toBigInt(),
+      result[4].toBigInt()
+    );
+  }
+
+  try_getRoundData2(
+    _roundId: BigInt
+  ): ethereum.CallResult<EACAggregator__getRoundData2Result> {
+    let result = super.tryCall(
+      "getRoundData",
+      "getRoundData(uint80):(uint80,int256,uint256,uint256,uint80)",
+      [ethereum.Value.fromUnsignedBigInt(_roundId)]
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(
+      new EACAggregator__getRoundData2Result(
+        value[0].toBigInt(),
+        value[1].toBigInt(),
+        value[2].toBigInt(),
+        value[3].toBigInt(),
+        value[4].toBigInt()
+      )
+    );
+  }
+
+  getTimestamp2(_roundId: BigInt): BigInt {
+    let result = super.call("getTimestamp", "getTimestamp(uint256):(uint256)", [
+      ethereum.Value.fromUnsignedBigInt(_roundId)
+    ]);
+
+    return result[0].toBigInt();
+  }
+
+  try_getTimestamp2(_roundId: BigInt): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "getTimestamp",
+      "getTimestamp(uint256):(uint256)",
+      [ethereum.Value.fromUnsignedBigInt(_roundId)]
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  hasAccess1(_user: Address, _calldata: Bytes): boolean {
+    let result = super.call("hasAccess", "hasAccess(address,bytes):(bool)", [
+      ethereum.Value.fromAddress(_user),
+      ethereum.Value.fromBytes(_calldata)
+    ]);
+
+    return result[0].toBoolean();
+  }
+
+  try_hasAccess1(
+    _user: Address,
+    _calldata: Bytes
+  ): ethereum.CallResult<boolean> {
+    let result = super.tryCall("hasAccess", "hasAccess(address,bytes):(bool)", [
+      ethereum.Value.fromAddress(_user),
+      ethereum.Value.fromBytes(_calldata)
+    ]);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBoolean());
+  }
+
+  latestAnswer2(): BigInt {
+    let result = super.call("latestAnswer", "latestAnswer():(int256)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_latestAnswer2(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("latestAnswer", "latestAnswer():(int256)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  latestRound2(): BigInt {
+    let result = super.call("latestRound", "latestRound():(uint256)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_latestRound2(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("latestRound", "latestRound():(uint256)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  latestRoundData2(): EACAggregator__latestRoundData2Result {
+    let result = super.call(
+      "latestRoundData",
+      "latestRoundData():(uint80,int256,uint256,uint256,uint80)",
+      []
+    );
+
+    return new EACAggregator__latestRoundData2Result(
+      result[0].toBigInt(),
+      result[1].toBigInt(),
+      result[2].toBigInt(),
+      result[3].toBigInt(),
+      result[4].toBigInt()
+    );
+  }
+
+  try_latestRoundData2(): ethereum.CallResult<
+    EACAggregator__latestRoundData2Result
+  > {
+    let result = super.tryCall(
+      "latestRoundData",
+      "latestRoundData():(uint80,int256,uint256,uint256,uint80)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(
+      new EACAggregator__latestRoundData2Result(
+        value[0].toBigInt(),
+        value[1].toBigInt(),
+        value[2].toBigInt(),
+        value[3].toBigInt(),
+        value[4].toBigInt()
+      )
+    );
+  }
+
+  latestTimestamp2(): BigInt {
+    let result = super.call(
+      "latestTimestamp",
+      "latestTimestamp():(uint256)",
+      []
+    );
+
+    return result[0].toBigInt();
+  }
+
+  try_latestTimestamp2(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "latestTimestamp",
+      "latestTimestamp():(uint256)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  linkToken1(): Address {
+    let result = super.call("linkToken", "linkToken():(address)", []);
+
+    return result[0].toAddress();
+  }
+
+  try_linkToken1(): ethereum.CallResult<Address> {
+    let result = super.tryCall("linkToken", "linkToken():(address)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toAddress());
+  }
+
+  maxSubmissionCount1(): BigInt {
+    let result = super.call(
+      "maxSubmissionCount",
+      "maxSubmissionCount():(uint32)",
+      []
+    );
+
+    return result[0].toBigInt();
+  }
+
+  try_maxSubmissionCount1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "maxSubmissionCount",
+      "maxSubmissionCount():(uint32)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  maxSubmissionValue1(): BigInt {
+    let result = super.call(
+      "maxSubmissionValue",
+      "maxSubmissionValue():(int256)",
+      []
+    );
+
+    return result[0].toBigInt();
+  }
+
+  try_maxSubmissionValue1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "maxSubmissionValue",
+      "maxSubmissionValue():(int256)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  minSubmissionCount1(): BigInt {
+    let result = super.call(
+      "minSubmissionCount",
+      "minSubmissionCount():(uint32)",
+      []
+    );
+
+    return result[0].toBigInt();
+  }
+
+  try_minSubmissionCount1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "minSubmissionCount",
+      "minSubmissionCount():(uint32)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  minSubmissionValue1(): BigInt {
+    let result = super.call(
+      "minSubmissionValue",
+      "minSubmissionValue():(int256)",
+      []
+    );
+
+    return result[0].toBigInt();
+  }
+
+  try_minSubmissionValue1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "minSubmissionValue",
+      "minSubmissionValue():(int256)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  oracleCount1(): i32 {
+    let result = super.call("oracleCount", "oracleCount():(uint8)", []);
+
+    return result[0].toI32();
+  }
+
+  try_oracleCount1(): ethereum.CallResult<i32> {
+    let result = super.tryCall("oracleCount", "oracleCount():(uint8)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toI32());
+  }
+
+  oracleRoundState1(
+    _oracle: Address,
+    _queriedRoundId: BigInt
+  ): EACAggregator__oracleRoundState1Result {
+    let result = super.call(
+      "oracleRoundState",
+      "oracleRoundState(address,uint32):(bool,uint32,int256,uint64,uint64,uint128,uint8,uint128)",
+      [
+        ethereum.Value.fromAddress(_oracle),
+        ethereum.Value.fromUnsignedBigInt(_queriedRoundId)
+      ]
+    );
+
+    return new EACAggregator__oracleRoundState1Result(
+      result[0].toBoolean(),
+      result[1].toBigInt(),
+      result[2].toBigInt(),
+      result[3].toBigInt(),
+      result[4].toBigInt(),
+      result[5].toBigInt(),
+      result[6].toI32(),
+      result[7].toBigInt()
+    );
+  }
+
+  try_oracleRoundState1(
+    _oracle: Address,
+    _queriedRoundId: BigInt
+  ): ethereum.CallResult<EACAggregator__oracleRoundState1Result> {
+    let result = super.tryCall(
+      "oracleRoundState",
+      "oracleRoundState(address,uint32):(bool,uint32,int256,uint64,uint64,uint128,uint8,uint128)",
+      [
+        ethereum.Value.fromAddress(_oracle),
+        ethereum.Value.fromUnsignedBigInt(_queriedRoundId)
+      ]
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(
+      new EACAggregator__oracleRoundState1Result(
+        value[0].toBoolean(),
+        value[1].toBigInt(),
+        value[2].toBigInt(),
+        value[3].toBigInt(),
+        value[4].toBigInt(),
+        value[5].toBigInt(),
+        value[6].toI32(),
+        value[7].toBigInt()
+      )
+    );
+  }
+
+  owner2(): Address {
+    let result = super.call("owner", "owner():(address)", []);
+
+    return result[0].toAddress();
+  }
+
+  try_owner2(): ethereum.CallResult<Address> {
+    let result = super.tryCall("owner", "owner():(address)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toAddress());
+  }
+
+  paymentAmount1(): BigInt {
+    let result = super.call("paymentAmount", "paymentAmount():(uint128)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_paymentAmount1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "paymentAmount",
+      "paymentAmount():(uint128)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  requestNewRound1(): BigInt {
+    let result = super.call(
+      "requestNewRound",
+      "requestNewRound():(uint80)",
+      []
+    );
+
+    return result[0].toBigInt();
+  }
+
+  try_requestNewRound1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "requestNewRound",
+      "requestNewRound():(uint80)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  restartDelay1(): BigInt {
+    let result = super.call("restartDelay", "restartDelay():(uint32)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_restartDelay1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("restartDelay", "restartDelay():(uint32)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  timeout1(): BigInt {
+    let result = super.call("timeout", "timeout():(uint32)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_timeout1(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("timeout", "timeout():(uint32)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  validator1(): Address {
+    let result = super.call("validator", "validator():(address)", []);
+
+    return result[0].toAddress();
+  }
+
+  try_validator1(): ethereum.CallResult<Address> {
+    let result = super.tryCall("validator", "validator():(address)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toAddress());
+  }
+
+  version2(): BigInt {
+    let result = super.call("version", "version():(uint256)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_version2(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("version", "version():(uint256)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  withdrawablePayment1(_oracle: Address): BigInt {
+    let result = super.call(
+      "withdrawablePayment",
+      "withdrawablePayment(address):(uint256)",
+      [ethereum.Value.fromAddress(_oracle)]
+    );
+
+    return result[0].toBigInt();
+  }
+
+  try_withdrawablePayment1(_oracle: Address): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "withdrawablePayment",
+      "withdrawablePayment(address):(uint256)",
+      [ethereum.Value.fromAddress(_oracle)]
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  aggregator1(): Address {
+    let result = super.call("aggregator", "aggregator():(address)", []);
+
+    return result[0].toAddress();
+  }
+
+  try_aggregator1(): ethereum.CallResult<Address> {
+    let result = super.tryCall("aggregator", "aggregator():(address)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toAddress());
+  }
+
+  decimals3(): i32 {
+    let result = super.call("decimals", "decimals():(uint8)", []);
+
+    return result[0].toI32();
+  }
+
+  try_decimals3(): ethereum.CallResult<i32> {
+    let result = super.tryCall("decimals", "decimals():(uint8)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toI32());
+  }
+
+  description3(): string {
+    let result = super.call("description", "description():(string)", []);
+
+    return result[0].toString();
+  }
+
+  try_description3(): ethereum.CallResult<string> {
+    let result = super.tryCall("description", "description():(string)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toString());
+  }
+
+  getAnswer3(_roundId: BigInt): BigInt {
+    let result = super.call("getAnswer", "getAnswer(uint256):(int256)", [
+      ethereum.Value.fromUnsignedBigInt(_roundId)
+    ]);
+
+    return result[0].toBigInt();
+  }
+
+  try_getAnswer3(_roundId: BigInt): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("getAnswer", "getAnswer(uint256):(int256)", [
+      ethereum.Value.fromUnsignedBigInt(_roundId)
+    ]);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  getRoundData3(_roundId: BigInt): EACAggregator__getRoundData3Result {
+    let result = super.call(
+      "getRoundData",
+      "getRoundData(uint80):(uint80,int256,uint256,uint256,uint80)",
+      [ethereum.Value.fromUnsignedBigInt(_roundId)]
+    );
+
+    return new EACAggregator__getRoundData3Result(
+      result[0].toBigInt(),
+      result[1].toBigInt(),
+      result[2].toBigInt(),
+      result[3].toBigInt(),
+      result[4].toBigInt()
+    );
+  }
+
+  try_getRoundData3(
+    _roundId: BigInt
+  ): ethereum.CallResult<EACAggregator__getRoundData3Result> {
+    let result = super.tryCall(
+      "getRoundData",
+      "getRoundData(uint80):(uint80,int256,uint256,uint256,uint80)",
+      [ethereum.Value.fromUnsignedBigInt(_roundId)]
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(
+      new EACAggregator__getRoundData3Result(
+        value[0].toBigInt(),
+        value[1].toBigInt(),
+        value[2].toBigInt(),
+        value[3].toBigInt(),
+        value[4].toBigInt()
+      )
+    );
+  }
+
+  getTimestamp3(_roundId: BigInt): BigInt {
+    let result = super.call("getTimestamp", "getTimestamp(uint256):(uint256)", [
+      ethereum.Value.fromUnsignedBigInt(_roundId)
+    ]);
+
+    return result[0].toBigInt();
+  }
+
+  try_getTimestamp3(_roundId: BigInt): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "getTimestamp",
+      "getTimestamp(uint256):(uint256)",
+      [ethereum.Value.fromUnsignedBigInt(_roundId)]
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  latestAnswer3(): BigInt {
+    let result = super.call("latestAnswer", "latestAnswer():(int256)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_latestAnswer3(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("latestAnswer", "latestAnswer():(int256)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  latestRound3(): BigInt {
+    let result = super.call("latestRound", "latestRound():(uint256)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_latestRound3(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("latestRound", "latestRound():(uint256)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  latestRoundData3(): EACAggregator__latestRoundData3Result {
+    let result = super.call(
+      "latestRoundData",
+      "latestRoundData():(uint80,int256,uint256,uint256,uint80)",
+      []
+    );
+
+    return new EACAggregator__latestRoundData3Result(
+      result[0].toBigInt(),
+      result[1].toBigInt(),
+      result[2].toBigInt(),
+      result[3].toBigInt(),
+      result[4].toBigInt()
+    );
+  }
+
+  try_latestRoundData3(): ethereum.CallResult<
+    EACAggregator__latestRoundData3Result
+  > {
+    let result = super.tryCall(
+      "latestRoundData",
+      "latestRoundData():(uint80,int256,uint256,uint256,uint80)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(
+      new EACAggregator__latestRoundData3Result(
+        value[0].toBigInt(),
+        value[1].toBigInt(),
+        value[2].toBigInt(),
+        value[3].toBigInt(),
+        value[4].toBigInt()
+      )
+    );
+  }
+
+  latestTimestamp3(): BigInt {
+    let result = super.call(
+      "latestTimestamp",
+      "latestTimestamp():(uint256)",
+      []
+    );
+
+    return result[0].toBigInt();
+  }
+
+  try_latestTimestamp3(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall(
+      "latestTimestamp",
+      "latestTimestamp():(uint256)",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
+
+  version3(): BigInt {
+    let result = super.call("version", "version():(uint256)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_version3(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("version", "version():(uint256)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
 }
 
 export class ConstructorCall extends ethereum.Call {
@@ -2728,6 +4283,698 @@ export class WithdrawPaymentCall__Outputs {
   _call: WithdrawPaymentCall;
 
   constructor(call: WithdrawPaymentCall) {
+    this._call = call;
+  }
+}
+
+export class Constructor2Call extends ethereum.Call {
+  get inputs(): Constructor2Call__Inputs {
+    return new Constructor2Call__Inputs(this);
+  }
+
+  get outputs(): Constructor2Call__Outputs {
+    return new Constructor2Call__Outputs(this);
+  }
+}
+
+export class Constructor2Call__Inputs {
+  _call: Constructor2Call;
+
+  constructor(call: Constructor2Call) {
+    this._call = call;
+  }
+
+  get _link(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+
+  get _paymentAmount(): BigInt {
+    return this._call.inputValues[1].value.toBigInt();
+  }
+
+  get _timeout(): BigInt {
+    return this._call.inputValues[2].value.toBigInt();
+  }
+
+  get _validator(): Address {
+    return this._call.inputValues[3].value.toAddress();
+  }
+
+  get _minSubmissionValue(): BigInt {
+    return this._call.inputValues[4].value.toBigInt();
+  }
+
+  get _maxSubmissionValue(): BigInt {
+    return this._call.inputValues[5].value.toBigInt();
+  }
+
+  get _decimals(): i32 {
+    return this._call.inputValues[6].value.toI32();
+  }
+
+  get _description(): string {
+    return this._call.inputValues[7].value.toString();
+  }
+}
+
+export class Constructor2Call__Outputs {
+  _call: Constructor2Call;
+
+  constructor(call: Constructor2Call) {
+    this._call = call;
+  }
+}
+
+export class AcceptAdmin1Call extends ethereum.Call {
+  get inputs(): AcceptAdmin1Call__Inputs {
+    return new AcceptAdmin1Call__Inputs(this);
+  }
+
+  get outputs(): AcceptAdmin1Call__Outputs {
+    return new AcceptAdmin1Call__Outputs(this);
+  }
+}
+
+export class AcceptAdmin1Call__Inputs {
+  _call: AcceptAdmin1Call;
+
+  constructor(call: AcceptAdmin1Call) {
+    this._call = call;
+  }
+
+  get _oracle(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+}
+
+export class AcceptAdmin1Call__Outputs {
+  _call: AcceptAdmin1Call;
+
+  constructor(call: AcceptAdmin1Call) {
+    this._call = call;
+  }
+}
+
+export class AcceptOwnership2Call extends ethereum.Call {
+  get inputs(): AcceptOwnership2Call__Inputs {
+    return new AcceptOwnership2Call__Inputs(this);
+  }
+
+  get outputs(): AcceptOwnership2Call__Outputs {
+    return new AcceptOwnership2Call__Outputs(this);
+  }
+}
+
+export class AcceptOwnership2Call__Inputs {
+  _call: AcceptOwnership2Call;
+
+  constructor(call: AcceptOwnership2Call) {
+    this._call = call;
+  }
+}
+
+export class AcceptOwnership2Call__Outputs {
+  _call: AcceptOwnership2Call;
+
+  constructor(call: AcceptOwnership2Call) {
+    this._call = call;
+  }
+}
+
+export class AddAccess1Call extends ethereum.Call {
+  get inputs(): AddAccess1Call__Inputs {
+    return new AddAccess1Call__Inputs(this);
+  }
+
+  get outputs(): AddAccess1Call__Outputs {
+    return new AddAccess1Call__Outputs(this);
+  }
+}
+
+export class AddAccess1Call__Inputs {
+  _call: AddAccess1Call;
+
+  constructor(call: AddAccess1Call) {
+    this._call = call;
+  }
+
+  get _user(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+}
+
+export class AddAccess1Call__Outputs {
+  _call: AddAccess1Call;
+
+  constructor(call: AddAccess1Call) {
+    this._call = call;
+  }
+}
+
+export class ChangeOracles1Call extends ethereum.Call {
+  get inputs(): ChangeOracles1Call__Inputs {
+    return new ChangeOracles1Call__Inputs(this);
+  }
+
+  get outputs(): ChangeOracles1Call__Outputs {
+    return new ChangeOracles1Call__Outputs(this);
+  }
+}
+
+export class ChangeOracles1Call__Inputs {
+  _call: ChangeOracles1Call;
+
+  constructor(call: ChangeOracles1Call) {
+    this._call = call;
+  }
+
+  get _removed(): Array<Address> {
+    return this._call.inputValues[0].value.toAddressArray();
+  }
+
+  get _added(): Array<Address> {
+    return this._call.inputValues[1].value.toAddressArray();
+  }
+
+  get _addedAdmins(): Array<Address> {
+    return this._call.inputValues[2].value.toAddressArray();
+  }
+
+  get _minSubmissions(): BigInt {
+    return this._call.inputValues[3].value.toBigInt();
+  }
+
+  get _maxSubmissions(): BigInt {
+    return this._call.inputValues[4].value.toBigInt();
+  }
+
+  get _restartDelay(): BigInt {
+    return this._call.inputValues[5].value.toBigInt();
+  }
+}
+
+export class ChangeOracles1Call__Outputs {
+  _call: ChangeOracles1Call;
+
+  constructor(call: ChangeOracles1Call) {
+    this._call = call;
+  }
+}
+
+export class DisableAccessCheck1Call extends ethereum.Call {
+  get inputs(): DisableAccessCheck1Call__Inputs {
+    return new DisableAccessCheck1Call__Inputs(this);
+  }
+
+  get outputs(): DisableAccessCheck1Call__Outputs {
+    return new DisableAccessCheck1Call__Outputs(this);
+  }
+}
+
+export class DisableAccessCheck1Call__Inputs {
+  _call: DisableAccessCheck1Call;
+
+  constructor(call: DisableAccessCheck1Call) {
+    this._call = call;
+  }
+}
+
+export class DisableAccessCheck1Call__Outputs {
+  _call: DisableAccessCheck1Call;
+
+  constructor(call: DisableAccessCheck1Call) {
+    this._call = call;
+  }
+}
+
+export class EnableAccessCheck1Call extends ethereum.Call {
+  get inputs(): EnableAccessCheck1Call__Inputs {
+    return new EnableAccessCheck1Call__Inputs(this);
+  }
+
+  get outputs(): EnableAccessCheck1Call__Outputs {
+    return new EnableAccessCheck1Call__Outputs(this);
+  }
+}
+
+export class EnableAccessCheck1Call__Inputs {
+  _call: EnableAccessCheck1Call;
+
+  constructor(call: EnableAccessCheck1Call) {
+    this._call = call;
+  }
+}
+
+export class EnableAccessCheck1Call__Outputs {
+  _call: EnableAccessCheck1Call;
+
+  constructor(call: EnableAccessCheck1Call) {
+    this._call = call;
+  }
+}
+
+export class OnTokenTransfer1Call extends ethereum.Call {
+  get inputs(): OnTokenTransfer1Call__Inputs {
+    return new OnTokenTransfer1Call__Inputs(this);
+  }
+
+  get outputs(): OnTokenTransfer1Call__Outputs {
+    return new OnTokenTransfer1Call__Outputs(this);
+  }
+}
+
+export class OnTokenTransfer1Call__Inputs {
+  _call: OnTokenTransfer1Call;
+
+  constructor(call: OnTokenTransfer1Call) {
+    this._call = call;
+  }
+
+  get value0(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+
+  get value1(): BigInt {
+    return this._call.inputValues[1].value.toBigInt();
+  }
+
+  get _data(): Bytes {
+    return this._call.inputValues[2].value.toBytes();
+  }
+}
+
+export class OnTokenTransfer1Call__Outputs {
+  _call: OnTokenTransfer1Call;
+
+  constructor(call: OnTokenTransfer1Call) {
+    this._call = call;
+  }
+}
+
+export class RemoveAccess1Call extends ethereum.Call {
+  get inputs(): RemoveAccess1Call__Inputs {
+    return new RemoveAccess1Call__Inputs(this);
+  }
+
+  get outputs(): RemoveAccess1Call__Outputs {
+    return new RemoveAccess1Call__Outputs(this);
+  }
+}
+
+export class RemoveAccess1Call__Inputs {
+  _call: RemoveAccess1Call;
+
+  constructor(call: RemoveAccess1Call) {
+    this._call = call;
+  }
+
+  get _user(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+}
+
+export class RemoveAccess1Call__Outputs {
+  _call: RemoveAccess1Call;
+
+  constructor(call: RemoveAccess1Call) {
+    this._call = call;
+  }
+}
+
+export class RequestNewRound1Call extends ethereum.Call {
+  get inputs(): RequestNewRound1Call__Inputs {
+    return new RequestNewRound1Call__Inputs(this);
+  }
+
+  get outputs(): RequestNewRound1Call__Outputs {
+    return new RequestNewRound1Call__Outputs(this);
+  }
+}
+
+export class RequestNewRound1Call__Inputs {
+  _call: RequestNewRound1Call;
+
+  constructor(call: RequestNewRound1Call) {
+    this._call = call;
+  }
+}
+
+export class RequestNewRound1Call__Outputs {
+  _call: RequestNewRound1Call;
+
+  constructor(call: RequestNewRound1Call) {
+    this._call = call;
+  }
+
+  get value0(): BigInt {
+    return this._call.outputValues[0].value.toBigInt();
+  }
+}
+
+export class SetRequesterPermissions1Call extends ethereum.Call {
+  get inputs(): SetRequesterPermissions1Call__Inputs {
+    return new SetRequesterPermissions1Call__Inputs(this);
+  }
+
+  get outputs(): SetRequesterPermissions1Call__Outputs {
+    return new SetRequesterPermissions1Call__Outputs(this);
+  }
+}
+
+export class SetRequesterPermissions1Call__Inputs {
+  _call: SetRequesterPermissions1Call;
+
+  constructor(call: SetRequesterPermissions1Call) {
+    this._call = call;
+  }
+
+  get _requester(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+
+  get _authorized(): boolean {
+    return this._call.inputValues[1].value.toBoolean();
+  }
+
+  get _delay(): BigInt {
+    return this._call.inputValues[2].value.toBigInt();
+  }
+}
+
+export class SetRequesterPermissions1Call__Outputs {
+  _call: SetRequesterPermissions1Call;
+
+  constructor(call: SetRequesterPermissions1Call) {
+    this._call = call;
+  }
+}
+
+export class SetValidator1Call extends ethereum.Call {
+  get inputs(): SetValidator1Call__Inputs {
+    return new SetValidator1Call__Inputs(this);
+  }
+
+  get outputs(): SetValidator1Call__Outputs {
+    return new SetValidator1Call__Outputs(this);
+  }
+}
+
+export class SetValidator1Call__Inputs {
+  _call: SetValidator1Call;
+
+  constructor(call: SetValidator1Call) {
+    this._call = call;
+  }
+
+  get _newValidator(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+}
+
+export class SetValidator1Call__Outputs {
+  _call: SetValidator1Call;
+
+  constructor(call: SetValidator1Call) {
+    this._call = call;
+  }
+}
+
+export class Submit1Call extends ethereum.Call {
+  get inputs(): Submit1Call__Inputs {
+    return new Submit1Call__Inputs(this);
+  }
+
+  get outputs(): Submit1Call__Outputs {
+    return new Submit1Call__Outputs(this);
+  }
+}
+
+export class Submit1Call__Inputs {
+  _call: Submit1Call;
+
+  constructor(call: Submit1Call) {
+    this._call = call;
+  }
+
+  get _roundId(): BigInt {
+    return this._call.inputValues[0].value.toBigInt();
+  }
+
+  get _submission(): BigInt {
+    return this._call.inputValues[1].value.toBigInt();
+  }
+}
+
+export class Submit1Call__Outputs {
+  _call: Submit1Call;
+
+  constructor(call: Submit1Call) {
+    this._call = call;
+  }
+}
+
+export class TransferAdmin1Call extends ethereum.Call {
+  get inputs(): TransferAdmin1Call__Inputs {
+    return new TransferAdmin1Call__Inputs(this);
+  }
+
+  get outputs(): TransferAdmin1Call__Outputs {
+    return new TransferAdmin1Call__Outputs(this);
+  }
+}
+
+export class TransferAdmin1Call__Inputs {
+  _call: TransferAdmin1Call;
+
+  constructor(call: TransferAdmin1Call) {
+    this._call = call;
+  }
+
+  get _oracle(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+
+  get _newAdmin(): Address {
+    return this._call.inputValues[1].value.toAddress();
+  }
+}
+
+export class TransferAdmin1Call__Outputs {
+  _call: TransferAdmin1Call;
+
+  constructor(call: TransferAdmin1Call) {
+    this._call = call;
+  }
+}
+
+export class TransferOwnership2Call extends ethereum.Call {
+  get inputs(): TransferOwnership2Call__Inputs {
+    return new TransferOwnership2Call__Inputs(this);
+  }
+
+  get outputs(): TransferOwnership2Call__Outputs {
+    return new TransferOwnership2Call__Outputs(this);
+  }
+}
+
+export class TransferOwnership2Call__Inputs {
+  _call: TransferOwnership2Call;
+
+  constructor(call: TransferOwnership2Call) {
+    this._call = call;
+  }
+
+  get _to(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+}
+
+export class TransferOwnership2Call__Outputs {
+  _call: TransferOwnership2Call;
+
+  constructor(call: TransferOwnership2Call) {
+    this._call = call;
+  }
+}
+
+export class UpdateAvailableFunds1Call extends ethereum.Call {
+  get inputs(): UpdateAvailableFunds1Call__Inputs {
+    return new UpdateAvailableFunds1Call__Inputs(this);
+  }
+
+  get outputs(): UpdateAvailableFunds1Call__Outputs {
+    return new UpdateAvailableFunds1Call__Outputs(this);
+  }
+}
+
+export class UpdateAvailableFunds1Call__Inputs {
+  _call: UpdateAvailableFunds1Call;
+
+  constructor(call: UpdateAvailableFunds1Call) {
+    this._call = call;
+  }
+}
+
+export class UpdateAvailableFunds1Call__Outputs {
+  _call: UpdateAvailableFunds1Call;
+
+  constructor(call: UpdateAvailableFunds1Call) {
+    this._call = call;
+  }
+}
+
+export class UpdateFutureRounds1Call extends ethereum.Call {
+  get inputs(): UpdateFutureRounds1Call__Inputs {
+    return new UpdateFutureRounds1Call__Inputs(this);
+  }
+
+  get outputs(): UpdateFutureRounds1Call__Outputs {
+    return new UpdateFutureRounds1Call__Outputs(this);
+  }
+}
+
+export class UpdateFutureRounds1Call__Inputs {
+  _call: UpdateFutureRounds1Call;
+
+  constructor(call: UpdateFutureRounds1Call) {
+    this._call = call;
+  }
+
+  get _paymentAmount(): BigInt {
+    return this._call.inputValues[0].value.toBigInt();
+  }
+
+  get _minSubmissions(): BigInt {
+    return this._call.inputValues[1].value.toBigInt();
+  }
+
+  get _maxSubmissions(): BigInt {
+    return this._call.inputValues[2].value.toBigInt();
+  }
+
+  get _restartDelay(): BigInt {
+    return this._call.inputValues[3].value.toBigInt();
+  }
+
+  get _timeout(): BigInt {
+    return this._call.inputValues[4].value.toBigInt();
+  }
+}
+
+export class UpdateFutureRounds1Call__Outputs {
+  _call: UpdateFutureRounds1Call;
+
+  constructor(call: UpdateFutureRounds1Call) {
+    this._call = call;
+  }
+}
+
+export class WithdrawFunds1Call extends ethereum.Call {
+  get inputs(): WithdrawFunds1Call__Inputs {
+    return new WithdrawFunds1Call__Inputs(this);
+  }
+
+  get outputs(): WithdrawFunds1Call__Outputs {
+    return new WithdrawFunds1Call__Outputs(this);
+  }
+}
+
+export class WithdrawFunds1Call__Inputs {
+  _call: WithdrawFunds1Call;
+
+  constructor(call: WithdrawFunds1Call) {
+    this._call = call;
+  }
+
+  get _recipient(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+
+  get _amount(): BigInt {
+    return this._call.inputValues[1].value.toBigInt();
+  }
+}
+
+export class WithdrawFunds1Call__Outputs {
+  _call: WithdrawFunds1Call;
+
+  constructor(call: WithdrawFunds1Call) {
+    this._call = call;
+  }
+}
+
+export class WithdrawPayment1Call extends ethereum.Call {
+  get inputs(): WithdrawPayment1Call__Inputs {
+    return new WithdrawPayment1Call__Inputs(this);
+  }
+
+  get outputs(): WithdrawPayment1Call__Outputs {
+    return new WithdrawPayment1Call__Outputs(this);
+  }
+}
+
+export class WithdrawPayment1Call__Inputs {
+  _call: WithdrawPayment1Call;
+
+  constructor(call: WithdrawPayment1Call) {
+    this._call = call;
+  }
+
+  get _oracle(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+
+  get _recipient(): Address {
+    return this._call.inputValues[1].value.toAddress();
+  }
+
+  get _amount(): BigInt {
+    return this._call.inputValues[2].value.toBigInt();
+  }
+}
+
+export class WithdrawPayment1Call__Outputs {
+  _call: WithdrawPayment1Call;
+
+  constructor(call: WithdrawPayment1Call) {
+    this._call = call;
+  }
+}
+
+export class Constructor3Call extends ethereum.Call {
+  get inputs(): Constructor3Call__Inputs {
+    return new Constructor3Call__Inputs(this);
+  }
+
+  get outputs(): Constructor3Call__Outputs {
+    return new Constructor3Call__Outputs(this);
+  }
+}
+
+export class Constructor3Call__Inputs {
+  _call: Constructor3Call;
+
+  constructor(call: Constructor3Call) {
+    this._call = call;
+  }
+
+  get _aggregator(): Address {
+    return this._call.inputValues[0].value.toAddress();
+  }
+
+  get _decimals(): i32 {
+    return this._call.inputValues[1].value.toI32();
+  }
+
+  get _description(): string {
+    return this._call.inputValues[2].value.toString();
+  }
+}
+
+export class Constructor3Call__Outputs {
+  _call: Constructor3Call;
+
+  constructor(call: Constructor3Call) {
     this._call = call;
   }
 }

@@ -9,8 +9,8 @@ import {
   EACAggregator,
 } from "../generated/EACAggregator/EACAggregator";
 import { RoundData, Aggregator } from "../generated/schema";
+import { EACAggregatorPool} from "../generated/templates";
 
-export const COUNT_ID = "all";
 export const ZERO = new BigInt(0);
 
 export function handleAggregatorChanged(call: ConfirmAggregatorCall): void {
@@ -18,10 +18,11 @@ export function handleAggregatorChanged(call: ConfirmAggregatorCall): void {
 
   let context = new DataSourceContext();
   context.setString("aggregator", call.inputs._aggregator.toHexString());
+  EACAggregatorPool.createWithContext(call.inputs._aggregator, context);
 
   let aggregator = createOrLoadAggregator(call.inputs._aggregator.toHexString());
   let contract = EACAggregator.bind(Address.fromBytes(Address.fromHexString("0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419")));
-  let phaseId = contract.phaseId() + 1;
+  let phaseId = contract.phaseId();
   aggregator.phaseID = phaseId;
   aggregator.save();
 }
