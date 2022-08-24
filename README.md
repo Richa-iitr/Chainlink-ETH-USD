@@ -6,11 +6,28 @@ Query for mainnet: [https://thegraph.com/hosted-service/subgraph/richa-iitr/chai
 
 <pre>
 {
-  roundDatas {
+  aggregators{
     id
-    timestamp
-    answer
-    roundId
+    phaseID
+    roundData {
+      id
+      roundId
+  		answer
+  		timestamp
+  		roundId
+		  blockNumber
+    }
   }
+  roundDatas {
+      id
+      roundId
+      aggregator{
+        id
+      }
+  		answer
+  		timestamp
+  		roundId
+		  blockNumber
+    }
 }
 </pre>
