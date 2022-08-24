@@ -12,10 +12,10 @@ Query for mainnet: [https://thegraph.com/hosted-service/subgraph/richa-iitr/chai
     roundData {
       id
       roundId
-  		answer
-  		timestamp
-  		roundId
-		  blockNumber
+      answer
+      timestamp
+      roundId
+      blockNumber
     }
   }
   roundDatas {
@@ -24,10 +24,10 @@ Query for mainnet: [https://thegraph.com/hosted-service/subgraph/richa-iitr/chai
       aggregator{
         id
       }
-  		answer
-  		timestamp
-  		roundId
-		  blockNumber
+      answer
+      timestamp
+      roundId
+      blockNumber
     }
 }
 </pre>
