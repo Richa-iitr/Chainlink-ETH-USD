@@ -42,22 +42,31 @@ export class RoundData extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get answer(): BigInt {
+  get aggregator(): string {
+    let value = this.get("aggregator");
+    return value!.toString();
+  }
+
+  set aggregator(value: string) {
+    this.set("aggregator", Value.fromString(value));
+  }
+
+  get answer(): i32 {
     let value = this.get("answer");
-    return value!.toBigInt();
+    return value!.toI32();
   }
 
-  set answer(value: BigInt) {
-    this.set("answer", Value.fromBigInt(value));
+  set answer(value: i32) {
+    this.set("answer", Value.fromI32(value));
   }
 
-  get timestamp(): BigInt {
+  get timestamp(): i32 {
     let value = this.get("timestamp");
-    return value!.toBigInt();
+    return value!.toI32();
   }
 
-  set timestamp(value: BigInt) {
-    this.set("timestamp", Value.fromBigInt(value));
+  set timestamp(value: i32) {
+    this.set("timestamp", Value.fromI32(value));
   }
 
   get roundId(): BigInt {
@@ -69,12 +78,62 @@ export class RoundData extends Entity {
     this.set("roundId", Value.fromBigInt(value));
   }
 
-  get blockNumber(): BigInt {
+  get blockNumber(): i32 {
     let value = this.get("blockNumber");
-    return value!.toBigInt();
+    return value!.toI32();
   }
 
-  set blockNumber(value: BigInt) {
-    this.set("blockNumber", Value.fromBigInt(value));
+  set blockNumber(value: i32) {
+    this.set("blockNumber", Value.fromI32(value));
+  }
+}
+
+export class Aggregator extends Entity {
+  constructor(id: string) {
+    super();
+    this.set("id", Value.fromString(id));
+  }
+
+  save(): void {
+    let id = this.get("id");
+    assert(id != null, "Cannot save Aggregator entity without an ID");
+    if (id) {
+      assert(
+        id.kind == ValueKind.STRING,
+        `Entities of type Aggregator must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+      );
+      store.set("Aggregator", id.toString(), this);
+    }
+  }
+
+  static load(id: string): Aggregator | null {
+    return changetype<Aggregator | null>(store.get("Aggregator", id));
+  }
+
+  get id(): string {
+    let value = this.get("id");
+    return value!.toString();
+  }
+
+  set id(value: string) {
+    this.set("id", Value.fromString(value));
+  }
+
+  get phaseID(): i32 {
+    let value = this.get("phaseID");
+    return value!.toI32();
+  }
+
+  set phaseID(value: i32) {
+    this.set("phaseID", Value.fromI32(value));
+  }
+
+  get roundData(): Array<string> {
+    let value = this.get("roundData");
+    return value!.toStringArray();
+  }
+
+  set roundData(value: Array<string>) {
+    this.set("roundData", Value.fromStringArray(value));
   }
 }
