@@ -14,6 +14,7 @@ dataSources:
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
+        - Aggregator
         - RoundData
       abis:
         - name: EACAggregator
@@ -22,6 +23,26 @@ dataSources:
         - function: confirmAggregator(address)
           handler: handleAggregatorChanged
       file: ./src/eac-aggregator-proxy.ts
+  - kind: ethereum
+    name: EACAggregatorPhase1
+    network: mainnet
+    source:
+      address: "0xF79D6aFBb6dA890132F9D7c355e3015f15F3406F"
+      abi: EACAggregator
+      startBlock: 10206400
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - RoundData
+      abis:
+        - name: EACAggregator
+          file: ./abis/EACAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedPhase1
+      file: ./src/eac-aggregator.ts
 templates:
   - kind: ethereum
     name: EACAggregatorPool
