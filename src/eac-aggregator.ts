@@ -1,9 +1,10 @@
-import { BigInt, log } from "@graphprotocol/graph-ts";
+import { BigInt, dataSource, log } from "@graphprotocol/graph-ts";
 import {
   EACAggregator,
   AnswerUpdated,
 } from "../generated/EACAggregator/EACAggregator";
 import { RoundData } from "../generated/schema";
+import { createOrLoadAggregator } from "./eac-aggregator-proxy";
 
 export function handleAnswerUpdated(event: AnswerUpdated): void {
   let id =
@@ -12,15 +13,22 @@ export function handleAnswerUpdated(event: AnswerUpdated): void {
   if (data == null) {
     data = new RoundData(id);
     data.answer = BigInt.fromI32(0);
-    data.timestamp = BigInt.fromI32(0);
-    data.roundId = BigInt.fromI32(0);
-    data.blockNumber = BigInt.fromI32(0);
+    data.timestamp = 0;
+    data.roundId = new BigInt(0);
+    data.blockNumber = 0;
   }
 
-  data.answer = event.params.current;
-  data.timestamp = event.params.updatedAt;
+  let context = dataSource.context();
+  data.answer = (event.params.current);
+  data.timestamp = (event.params.updatedAt).toI32();
   data.roundId = event.params.roundId;
-  data.blockNumber = event.block.number;
+  data.blockNumber = (event.block.number).toI32();
+  data.aggregator = context.getString("aggregator");
+
+  let aggregator = createOrLoadAggregator(data.aggregator);
+  let roundDatas = aggregator.roundData;
+  roundDatas.push(data.id);
+  aggregator.roundData = roundDatas;
 
   log.info("block timestamp: {}, event timetsamp: {}", [
     event.block.timestamp.toString(),
@@ -28,4 +36,5 @@ export function handleAnswerUpdated(event: AnswerUpdated): void {
   ]);
 
   data.save();
+  aggregator.save();
 }

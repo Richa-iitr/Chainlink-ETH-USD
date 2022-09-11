@@ -1,7 +1,14 @@
 type RoundData @entity {
   id: ID!
+  aggregator: Aggregator!
   answer: BigInt!
-  timestamp: BigInt! 
-  roundId: BigInt! 
-  blockNumber: BigInt!
+  timestamp: Int!
+  roundId: BigInt!
+  blockNumber: Int!
+}
+
+type Aggregator @entity {
+  id: ID!
+  phaseID: Int!
+  roundData: [RoundData!]!
 }
